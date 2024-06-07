@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/result.css">
+  <title>Result</title>
+</head>
+<body>
+  <div class="cards">
+    <div class="card">
+      <h2>Hasil Prediksi Claim</h2>
+      <p class="price">{{ result }}</p>
+      <br>
+      <p>Hasil tersebut adalah hasil prediksi claim berdasarkan data yang anda masukkan</p>
+    </div>
+    {% if limit is defined %}
+
+    <div class="card">
+      <h2>Rincian</h2>
+      <div class="list_harga">
+        <p>Limit mask ketidakmampuan: ${{ limit }}</p>
+        <p>Biaya kamar rawat inap per hari (maksimal 60 hari): ${{ biaya }}</p>
+      </div>
+    </div>
+  </div>
+    {% endif %}
+
+  <div class="premium-details-container">
+    <div class="premium-details">
+      <h3>Biaya Premi</h3>
+      <p>Lama Tahun: <select id="lamaTahunSelect">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select></p>
+      <div class="result-box" id="resultBox"></div>
+    </div>
+  </div>
+
+  <script src="/static/result.js"></script>
+</body>
+</html>

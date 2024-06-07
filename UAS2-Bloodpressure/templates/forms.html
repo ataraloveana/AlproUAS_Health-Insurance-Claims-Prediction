@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Form Data Diri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700'>
+  <link rel="stylesheet" href="static/forms.css">
+
+</head>
+<body class="form-body">
+<!-- partial:index.partial.html -->
+<div class="msg">
+        <h1 style="position:fixed;">Selamat Datang {{ nama }}
+        </h1>
+  </div>
+<br>
+<form action='/result' class='form' method="POST">
+
+<!--  fiel require untuk full-->
+  <p class='field required half'>
+    <label class='label required' for='age'>Umur</label>
+    <input class='text-input' id='age' name='age' required type='number' placeholder='Masukkan Umur' >
+  </p>
+  <p class='field required half'>
+    <label class='label' for='weight'>Berat Badan</label>
+    <input class='text-input' id='weight' name='weight' required type='number' placeholder="Masukkan Berat Badan (kg)">
+  </p>
+  <p class='field required half'>
+    <label class='label' for='height'>Tinggi Badan</label>
+    <input class='text-input' id='height' name='height' required type='number' placeholder="Masukkan Tinggi Badan (cm)">
+  </p>
+<!--  'field half required error' untuk error-->
+<!--  <p class='field required half'>-->
+<!--    <label class='label' for='password'>Password</label>-->
+<!--    <input class='text-input' id='password' name='password' required type='text'>-->
+<!--  </p>-->
+
+
+  <div class='field half'>
+    <label class='label'>Jenis Kelamin</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='female' name='sex' type='radio' value='0'>
+        <label class='option-label' for='female'>Female</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='male' name='sex' type='radio' value='1'>
+        <label class='option-label' for='male'>Male</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='troll' name='sex' type='radio' value='3'>
+        <label class='option-label' for='troll'>War Helicopter</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Perokok</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='smoker' name='smoker' type='radio' value='1'>
+        <label class='option-label' for='smoker'>Merokok</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='non-smoker' name='smoker' type='radio' value='0'>
+        <label class='option-label' for='non-smoker'>Tidak Merokok</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Diabetes</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='diabetes' name='diabetes' type='radio' value='1'>
+        <label class='option-label' for='diabetes'>Iya</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='no-diabetes' name='diabetes' type='radio' value='0'>
+        <label class='option-label' for='no-diabetes'>Tidak</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Rutin Olahraga</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='exercise' name='regular_ex' type='radio' value='1'>
+        <label class='option-label' for='exercise'>Iya</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='no-exercise' name='regular_ex' type='radio' value='0'>
+        <label class='option-label' for='no-exercise'>Tidak</label>
+      </li>
+    </ul>
+  </div>
+<!--  <p class='field'>-->
+<!--    <label class='label' for='about'>About</label>-->
+<!--    <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>-->
+<!--  </p>-->
+  <p class='field half'>
+    <label class='label' for='no_of_dependents'>Jumlah Tanggungan</label>
+    <select class='select' id='no_of_dependents' name="no_of_dependents">
+      <option selected value='0'>0</option>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+    </select>
+  </p>
+
+  <p class='field half'>
+    <label class='label' for='city'>Asal Kota</label>
+    <select class='select' id='city' name="city">
+      <option selected value='20'>Atlanta</option>
+      <option value='1'>Atlantic City</option>
+      <option value='10'>Baltimore</option>
+      <option value='1'>Boston</option>
+      <option value='4'>Buffalo</option>
+      <option value='6'>Cambridge</option>
+      <option value='22'>Charleston</option>
+      <option value='23'>Charlotte</option>
+      <option value='16'>Harrisburg</option>
+      <option value='7'>Hartford</option>
+      <option value='23'>Louisville </option>
+      <option value='0'>New York</option>
+      <option value='2'>Philadelphia</option>
+      <option value='3'>Pittsburg</option>
+      <option value='5'>Portland</option>
+      <option value='15'>Providence</option>
+      <option value='8'>Springfield</option>
+      <option value='9'>Syracuse</option>
+      <option value='12'>Trenton</option>
+      <option value='13'>Warwick</option>
+      <option value='14'>WashingtonDC</option>
+      <option value='19'>Worcester</option>
+    </select>
+  </p>
+
+  <p class='field half'>
+    <label class='label' for='job_title'>Pekerjaan</label>
+    <select class='select' id='job_title' name="job_title">
+      <option selected value='2'>Academician</option>
+      <option value='18'>Accountant</option>
+      <option value='0'>Actor</option>
+      <option value='28'>Analyst</option>
+      <option value='22'>Architect</option>
+      <option value='13'>Beautician</option>
+      <option value='15'>Blogger</option>
+      <option value='25'>Businessman</option>
+      <option value='16'>CEO</option>
+      <option value='3'>Chef</option>
+      <option value='5'>Dancer</option>
+      <option value='7'>Data Scientist</option>
+      <option value='10'>Doctor</option>
+      <option value='1'>Engineer</option>
+      <option value='21'>Fashion Designer</option>
+      <option value='24'>Film Maker</option>
+      <option value='34'>Government Employee</option>
+      <option value='23'>House Keeper</option>
+      <option value='32'>Journalist</option>
+      <option value='17'>Labourer</option>
+      <option value='33'>Lawyer</option>
+      <option value='11'>Manager</option>
+      <option value='12'>Photographer</option>
+      <option value='8'>Police</option>
+      <option value='26'>Politician</option>
+      <option value='6'>Singer</option>
+      <option value='9'>Student</option>
+      <option value='20'>Technician</option>
+    </select>
+  </p>
+
+  <p class='field half'>
+    <label class='label' for='hereditary_diseases'>Penyakit Turunan</label>
+    <select class='select' id='hereditary_diseases' name="hereditary_diseases">
+      <option selected value='0'>Tidak Ada</option>
+      <option value='1'>Epilepsy</option>
+    </select>
+  </p>
+
+  <p class='field half'>
+    <input class='button' type='submit' value='Send'>
+  </p>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.customSelect/0.5.1/jquery.customSelect.min.js'></script>
+<script src='https://codepen.io/mican/pen/XgRmNr.js'></script>
+<script type="text/javascript" src="/static/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/bootstrap.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width")
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    }
+  </script>
+
+</body>
+
+</html>
